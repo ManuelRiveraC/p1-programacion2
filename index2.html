@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Index 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <script>
+        //var n = prompt('Ingrese valor de entrada entre 0 y 2048');
+        var valores = [3,2,1];
+ 
+        var current, next, backup;
+
+       for (var i = 0; i < valores.length; i++){
+           for (var y =0; y < valores.length; y++){
+            current = valores[i];
+            next = valores[i+1];
+            if (current > next){
+                valores[i+1] = current;
+                valores[i] = next;
+            }
+           }
+
+       }
+       
+
+       for (var i = 0; i < valores.length; i++){
+        console.log('---------');
+        console.log(valores[i]);
+       }
+       //console.log(JSON.stringify(valores));
+       
+    </script>
+</body>
+</html>
